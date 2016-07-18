@@ -79,4 +79,10 @@ function playHadouken () {
 function playGroove () {
 	$('#groove-sound')[0].volume = 0.5;
 	$('#groove-sound')[0].play();
+<<<<<<< HEAD
 }
+=======
+}
+
+// combine ryu action images in one div class=ryu-action
+>>>>>>> ded65290424bda3eb3216194aa429feb44179c87
