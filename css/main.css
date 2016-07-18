@@ -1,15 +1,10 @@
 body {
-	background-color:black;
+	background-color: black;
 }
-
-/** {
-  outline: red 1px solid;
-}*/
 
 .main {
   background-color: white;
   margin-top: 110px;
-  padding-left: 100px;
   min-width: 1200px;
   height: 500px;
   position: relative;
@@ -17,8 +12,44 @@ body {
 }
 
 .ryu {
-    width: 659px;
-    height: 494px;
+  width: 659px;
+  height: 494px;
+  padding-left: 100px;
+}
+
+.hulk-ryu{
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  -webkit-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+  position:absolute;
+  padding-left:100px;
+  top: 0px;
+  right:0px;
+}
+
+.hulk-hadouken {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  -webkit-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+  background-image: url('../images/hadouken.gif');
+  width: 156px; 
+  height: 90px;
+  display: none;
+  float: left;
+  position: absolute;
+  z-index: 10;
+  top: 165px;
+  right: 580px;
 }
 
 .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
@@ -63,13 +94,16 @@ body {
 }
 
 .how-to {
-  font-family:impact;
+  font:italic 36px Impact;
+  background: -webkit-linear-gradient(yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: darkred;
   text-align:center;
-  font-size:28px;
   display:block;
   width:300px;
-  position:absolute;
-  top:100px;
-  left:550px;
-
+  position:relative;
+  margin:-450px auto 0px auto;
+  z-index:-99;
 }
