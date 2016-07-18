@@ -23,10 +23,43 @@ $(document).ready(function() {
 		$('.ryu-ready').show();
 		$('.ryu-throwing').hide();
 	})
+
+	$(document).keydown(function(event) {
+		if (event.which == 88) {
+			playGroove();
+			$('.ryu-still').hide();
+			$('.ryu-ready').hide();
+			$('.ryu-throwing').hide();
+			$('.ryu-cool').show();
+
+		};
+	}).keyup(function(event) {
+	 	if(event.which == 88) {
+	 		$('#groove-sound')[0].pause();
+	 		$('#groove-sound')[0].load();
+	 		$('.ryu-still').show();
+			$('.ryu-cool').hide();
+
+	 	};
+
+	 });
+
+
 });
 
 function playHadouken () {
 	$('#hadouken-sound')[0].volume = 0.5;
 	$('#hadouken-sound')[0].load();
 	$('#hadouken-sound')[0].play();
+<<<<<<< HEAD
 } 
+=======
+}
+
+function playGroove () {
+	$('#groove-sound')[0].volume = 0.5;
+	$('#groove-sound')[0].play();
+}
+
+// combine ryu action images in one div class=ryu-action
+>>>>>>> origin/master
